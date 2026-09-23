@@ -1,6 +1,14 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResendClient() {
+  const apiKey = process.env.RESEND_API_KEY;
+
+  if (!apiKey) {
+    throw new Error("Missing RESEND_API_KEY");
+  }
+
+  return new Resend(apiKey);
+}
 
 type TripEmailItem = {
   type: string;
@@ -60,6 +68,7 @@ function totalText(enquiry: TripEmailData) {
 }
 
 export async function sendTripEnquiryNotification(enquiry: TripEmailData) {
+  const resend = getResendClient();
   const notificationEmail = process.env.ENQUIRY_NOTIFICATION_EMAIL;
   if (!notificationEmail) {
     throw new Error("Missing ENQUIRY_NOTIFICATION_EMAIL");
@@ -83,6 +92,8 @@ export async function sendTripEnquiryNotification(enquiry: TripEmailData) {
 }
 
 export async function sendTripEnquiryConfirmation(enquiry: TripEmailData) {
+  const resend = getResendClient();
+
   return resend.emails.send({
     from: "Travel Asambe Africa <onboarding@resend.dev>",
     to: enquiry.email,

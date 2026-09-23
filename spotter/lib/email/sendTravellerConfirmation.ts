@@ -1,6 +1,14 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResendClient() {
+  const apiKey = process.env.RESEND_API_KEY;
+
+  if (!apiKey) {
+    throw new Error("Missing RESEND_API_KEY");
+  }
+
+  return new Resend(apiKey);
+}
 
 type TravellerConfirmationData = {
   reference: string;
@@ -26,6 +34,8 @@ function escapeHtml(value: unknown) {
 export async function sendTravellerConfirmation(
   enquiry: TravellerConfirmationData
 ) {
+  const resend = getResendClient();
+
   const formattedDate = new Date(
     `${enquiry.travelDate}T00:00:00`
   ).toLocaleDateString("en-GB", {

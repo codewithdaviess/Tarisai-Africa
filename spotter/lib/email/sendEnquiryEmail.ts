@@ -1,6 +1,14 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResendClient() {
+  const apiKey = process.env.RESEND_API_KEY;
+
+  if (!apiKey) {
+    throw new Error("Missing RESEND_API_KEY");
+  }
+
+  return new Resend(apiKey);
+}
 
 type EnquiryEmailData = {
   reference: string;
@@ -51,6 +59,8 @@ export async function sendEnquiryNotification(
       "Missing ENQUIRY_NOTIFICATION_EMAIL"
     );
   }
+
+  const resend = getResendClient();
 
   const formattedDate = formatDate(
     enquiry.travelDate
