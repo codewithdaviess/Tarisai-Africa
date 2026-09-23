@@ -31,12 +31,15 @@ export function SpecialCard({
     <article className="h-full overflow-hidden rounded-xs border border-neutral-200 bg-white">
       <Link
         href={`/specials/${slug}`}
+        prefetch={false}
         className="group flex h-full flex-col hover:shadow-lg"
       >
       <div className="relative overflow-hidden">
         <img
           src={image}
           alt={name}
+          loading="lazy"
+          decoding="async"
           className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
 

@@ -198,7 +198,7 @@ export function ActivityEnquiryForm({ activity }: ActivityEnquiryFormProps) {
           name="date"
           type="date"
           required
-          className="mt-2 block w-full min-w-0 max-w-full appearance-none border border-neutral-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-brand"
+          className="mt-2 block w-full max-w-full min-w-0 appearance-none border border-neutral-300 bg-white px-4 py-3 text-sm outline-none box-border transition focus:border-brand"
         />
 
         <label className="mt-3 flex items-center gap-2 text-sm text-neutral-600">

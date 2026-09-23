@@ -114,9 +114,15 @@ export default function ContactEnquiryForm({
         </div>
       </div>
 
-      <div>
+      <div className="min-w-0">
         <label htmlFor="arrival" className="mb-2 block text-sm font-medium">Preferred Travel Date</label>
-        <input id="arrival" name="arrival" type="date" required className="block w-full min-w-0 appearance-none border border-black/10 bg-black/2.5 px-4 py-3 text-sm outline-none transition-colors focus:border-black/40" />
+        <input
+          id="arrival"
+          name="arrival"
+          type="date"
+          required
+          className="block w-full max-w-full min-w-0 appearance-none border border-black/10 bg-black/2.5 px-4 py-3 text-sm outline-none box-border transition-colors focus:border-black/40"
+        />
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2">
