@@ -24,7 +24,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
   return (
     <div className="relative">
       {/* Image */}
-      <div className="relative h-[400px] overflow-hidden rounded-xs md:h-[520px]">
+      <div className="relative h-100 overflow-hidden rounded-xs md:h-130">
         <Image
           src={images[current].src}
           alt={images[current].alt}
