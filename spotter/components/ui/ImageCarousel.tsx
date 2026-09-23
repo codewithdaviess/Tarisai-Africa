@@ -12,6 +12,7 @@ type ImageCarouselProps = {
 
 export default function ImageCarousel({ images }: ImageCarouselProps) {
   const [current, setCurrent] = useState(0);
+  const isPrimaryImage = current === 0;
 
   const nextImage = () => {
     setCurrent((prev) => (prev + 1) % images.length);
@@ -29,7 +30,9 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
           src={images[current].src}
           alt={images[current].alt}
           fill
-          priority
+          priority={isPrimaryImage}
+          loading={isPrimaryImage ? "eager" : "lazy"}
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover transition-opacity duration-500"
         />
       </div>
