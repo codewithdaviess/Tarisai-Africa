@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Cormorant_Garamond, Quicksand } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
@@ -120,6 +121,7 @@ export default function RootLayout({
         </TripProvider>
 
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
