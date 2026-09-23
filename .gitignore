@@ -1,0 +1,27 @@
+# Local environment and secrets
+spotter/.env*
+!.env.example
+
+# Dependencies and generated framework output
+spotter/node_modules/
+spotter/.next/
+spotter/out/
+spotter/build/
+
+# TypeScript and tooling caches
+spotter/*.tsbuildinfo
+spotter/coverage/
+spotter/.turbo/
+spotter/.vercel/
+
+# Logs and local debug output
+spotter/npm-debug.log*
+spotter/yarn-debug.log*
+spotter/yarn-error.log*
+spotter/pnpm-debug.log*
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

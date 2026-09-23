@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #191817;
+
+  --app-brand: #f08720;
+  --app-brand-hover: #d96f0d;
+  --app-earth: #775327;
+  --app-ink: #191817;
+  --app-muted: #525252;
+  --app-subtle: #737373;
+  --app-faint: #a3a3a3;
+  --app-border: #e5e5e5;
+  --app-border-strong: #d4d4d4;
+  --app-surface: #f5f5f5;
+  --app-danger: #b91c1c;
+  --app-danger-surface: #fef2f2;
+
+  --type-label: 0.6875rem;
+  --type-label--line-height: 1.3;
+  --type-eyebrow: 0.75rem;
+  --type-eyebrow--line-height: 1.4;
+  --type-body: 0.875rem;
+  --type-body--line-height: 1.7;
+  --type-body-lg: 1rem;
+  --type-body-lg--line-height: 1.75;
+  --type-section-title: 1.5rem;
+  --type-section-title--line-height: 1.2;
+  --type-page-title: 2.25rem;
+  --type-page-title--line-height: 1.1;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand: var(--app-brand);
+  --color-brand-hover: var(--app-brand-hover);
+  --color-earth: var(--app-earth);
+  --color-ink: var(--app-ink);
+  --color-muted: var(--app-muted);
+  --color-subtle: var(--app-subtle);
+  --color-faint: var(--app-faint);
+  --color-border: var(--app-border);
+  --color-border-strong: var(--app-border-strong);
+  --color-surface: var(--app-surface);
+  --color-danger: var(--app-danger);
+  --color-danger-surface: var(--app-danger-surface);
+  --text-label: var(--type-label);
+  --text-label--line-height: var(--type-label--line-height);
+  --text-eyebrow: var(--type-eyebrow);
+  --text-eyebrow--line-height: var(--type-eyebrow--line-height);
+  --text-body: var(--type-body);
+  --text-body--line-height: var(--type-body--line-height);
+  --text-body-lg: var(--type-body-lg);
+  --text-body-lg--line-height: var(--type-body-lg--line-height);
+  --text-section-title: var(--type-section-title);
+  --text-section-title--line-height: var(--type-section-title--line-height);
+  --text-page-title: var(--type-page-title);
+  --text-page-title--line-height: var(--type-page-title--line-height);
+  --font-sans: var(--font-quicksand);
+  --font-display: var(--font-cormorant-garamond);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-quicksand), Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-cormorant-garamond), Georgia, serif;
+}
+
+::selection {
+  background: var(--app-ink);
+  color: var(--background);
+}
