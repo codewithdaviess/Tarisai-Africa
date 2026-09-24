@@ -61,6 +61,8 @@ export async function sendEnquiryNotification(
   }
 
   const resend = getResendClient();
+  const fromEmail =
+    process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
 
   const formattedDate = formatDate(
     enquiry.travelDate
@@ -82,7 +84,7 @@ export async function sendEnquiryNotification(
     .join(" · ");
 
   const { data, error } = await resend.emails.send({
-    from: "Travel Asambe Africa <onboarding@resend.dev>",
+    from: `Travel Asambe Africa <${fromEmail}>`,
     to: notificationEmail,
 
     subject: `New enquiry ${enquiry.reference} — ${enquiry.activityName}`,

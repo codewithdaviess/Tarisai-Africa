@@ -35,6 +35,8 @@ export async function sendTravellerConfirmation(
   enquiry: TravellerConfirmationData
 ) {
   const resend = getResendClient();
+  const fromEmail =
+    process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
 
   const formattedDate = new Date(
     `${enquiry.travelDate}T00:00:00`
@@ -60,7 +62,7 @@ export async function sendTravellerConfirmation(
     .join(" · ");
 
   const { data, error } = await resend.emails.send({
-    from: "Travel Asambe Africa <onboarding@resend.dev>",
+    from: `Travel Asambe Africa <${fromEmail}>`,
     to: enquiry.email,
 
     subject: `We've received your enquiry — ${enquiry.reference}`,

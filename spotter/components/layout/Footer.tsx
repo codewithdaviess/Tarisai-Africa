@@ -7,6 +7,11 @@ type SocialIconProps = {
   size?: number;
 };
 
+const FACEBOOK_URL =
+  "https://www.facebook.com/people/Travel-Asambe/61585513573139/?mibextid=wwXIfr&rdid=x6AE4Ry9ekhOrHdf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1KjSjaK5Tm%2F%3Fmibextid%3DwwXIfr";
+const INSTAGRAM_URL = "https://www.instagram.com/";
+const YOUTUBE_URL = "https://www.youtube.com/channel/UCB1Z0uR-3NR4GFKnlppVpvg";
+
 function FacebookIcon({ size = 17 }: SocialIconProps) {
   return (
     <svg
@@ -51,7 +56,7 @@ function InstagramIcon({ size = 17 }: SocialIconProps) {
   );
 }
 
-function LinkedinIcon({ size = 17 }: SocialIconProps) {
+function YouTubeIcon({ size = 17 }: SocialIconProps) {
   return (
     <svg
       aria-hidden="true"
@@ -60,7 +65,7 @@ function LinkedinIcon({ size = 17 }: SocialIconProps) {
       viewBox="0 0 24 24"
       fill="currentColor"
     >
-      <path d="M6.7 8.8H3V21h3.7V8.8ZM4.9 7.1a2.1 2.1 0 1 0 0-4.2 2.1 2.1 0 0 0 0 4.2ZM21 21h-3.7v-6.4c0-1.7-.7-2.6-2-2.6-1.4 0-2.2 1-2.2 2.6V21H9.4V8.8H13v1.6c.6-.9 1.8-1.9 3.7-1.9 2.6 0 4.3 1.7 4.3 5.3V21Z" />
+      <path d="M23.5 6.8a3.1 3.1 0 0 0-2.2-2.2C19.5 4.1 12 4.1 12 4.1s-7.5 0-9.3.5A3.1 3.1 0 0 0 .5 6.8C0 8.6 0 12 0 12s0 3.4.5 5.2a3.1 3.1 0 0 0 2.2 2.2c1.8.5 9.3.5 9.3.5s7.5 0 9.3-.5a3.1 3.1 0 0 0 2.2-2.2c.5-1.8.5-5.2.5-5.2s0-3.4-.5-5.2ZM9.8 15.5V8.5l6.3 3.5-6.3 3.5Z" />
     </svg>
   );
 }
@@ -72,7 +77,9 @@ export function Footer() {
         {/* Social Icons */}
         <div className="flex items-center gap-3">
           <a
-            href="#"
+            href={FACEBOOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Facebook"
             className="flex h-9 w-9 items-center justify-center rounded-full bg-earth text-white transition-colors duration-200 hover:bg-brand"
           >
@@ -80,7 +87,9 @@ export function Footer() {
           </a>
 
           <a
-            href="#"
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Instagram"
             className="flex h-9 w-9 items-center justify-center rounded-full bg-earth text-white transition-colors duration-200 hover:bg-brand"
           >
@@ -88,11 +97,13 @@ export function Footer() {
           </a>
 
           <a
-            href="#"
-            aria-label="LinkedIn"
+            href={YOUTUBE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
             className="flex h-9 w-9 items-center justify-center rounded-full bg-earth text-white transition-colors duration-200 hover:bg-brand"
           >
-            <LinkedinIcon size={17} />
+            <YouTubeIcon size={17} />
           </a>
         </div>
 

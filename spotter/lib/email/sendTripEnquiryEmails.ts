@@ -69,13 +69,15 @@ function totalText(enquiry: TripEmailData) {
 
 export async function sendTripEnquiryNotification(enquiry: TripEmailData) {
   const resend = getResendClient();
+  const fromEmail =
+    process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
   const notificationEmail = process.env.ENQUIRY_NOTIFICATION_EMAIL;
   if (!notificationEmail) {
     throw new Error("Missing ENQUIRY_NOTIFICATION_EMAIL");
   }
 
   return resend.emails.send({
-    from: "Travel Asambe Africa <onboarding@resend.dev>",
+    from: `Travel Asambe Africa <${fromEmail}>`,
     to: notificationEmail,
     subject: `New trip enquiry ${enquiry.reference}`,
     html: `<div style="font-family:Arial,sans-serif;max-width:620px;color:#171717">
@@ -93,9 +95,11 @@ export async function sendTripEnquiryNotification(enquiry: TripEmailData) {
 
 export async function sendTripEnquiryConfirmation(enquiry: TripEmailData) {
   const resend = getResendClient();
+  const fromEmail =
+    process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
 
   return resend.emails.send({
-    from: "Travel Asambe Africa <onboarding@resend.dev>",
+    from: `Travel Asambe Africa <${fromEmail}>`,
     to: enquiry.email,
     subject: `We've received your Travel Asambe Africa enquiry — ${enquiry.reference}`,
     html: `<div style="font-family:Arial,sans-serif;max-width:620px;color:#171717">
@@ -106,7 +110,13 @@ export async function sendTripEnquiryConfirmation(enquiry: TripEmailData) {
       <h2>Your requested trip</h2>
       <ul>${itemList(enquiry.items)}</ul>
       <p><strong>Travel date:</strong> ${escapeHtml(enquiry.travelDate)}<br /><strong>Travellers:</strong> ${enquiry.adults} adults, ${enquiry.children} children<br /><strong>Estimated total:</strong> ${escapeHtml(totalText(enquiry))}</p>
-      <p>Our team will check availability and prepare your itinerary and quotation. No payment is required at this stage.</p>
+      <h2>What happens next?</h2>
+      <ol>
+        <li>Our team will check availability for your selected dates and services.</li>
+        <li>We'll send you a confirmed quote with the final price and inclusions.</li>
+        <li>If you decide to proceed, we'll provide the next steps and payment details where applicable.</li>
+      </ol>
+      <p><strong>No payment is required at this stage.</strong> Submitting this enquiry does not confirm a booking or reserve availability. Your booking is only confirmed after you accept the quote, complete any required payment, and receive our booking confirmation.</p>
     </div>`,
   });
 }
