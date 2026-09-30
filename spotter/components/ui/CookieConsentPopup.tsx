@@ -158,7 +158,7 @@ export default function CookieConsentPopup() {
         </div>
 
         <p className="mt-4 text-sm leading-7 text-neutral-600">
-          Necessary cookies keep Travel Asambe Africa working. Optional cookies
+          Necessary cookies keep Tarisai Africa Travel working. Optional cookies
           can be enabled or disabled below.
         </p>
 

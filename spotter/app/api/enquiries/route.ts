@@ -485,7 +485,7 @@ export async function POST(request: Request) {
     const experienceName = special?.name ?? activity!.name;
 
     // --------------------------------
-    // Notify Travel Asambe Africa
+    // Notify Tarisai Africa Travel
     // --------------------------------
 
     try {

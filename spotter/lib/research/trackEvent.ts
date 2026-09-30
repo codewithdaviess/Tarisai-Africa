@@ -40,30 +40,7 @@ type TrackEventOptions = {
   metadata?: Record<string, unknown>;
 };
 
-export async function trackEvent({
-  eventName,
-  page,
-  entityType,
-  entitySlug,
-  metadata,
-}: TrackEventOptions): Promise<void> {
-  try {
-    await fetch("/api/research/events", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      credentials: "same-origin",
-      keepalive: true,
-      body: JSON.stringify({
-        eventName,
-        page,
-        entityType,
-        entitySlug,
-        metadata,
-      }),
-    });
-  } catch {
-    // Tracking must never break the user experience.
-  }
+export async function trackEvent(_: TrackEventOptions): Promise<void> {
+  // Tracking is disabled for this site.
+  return;
 }

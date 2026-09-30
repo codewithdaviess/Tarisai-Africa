@@ -62,7 +62,7 @@ export async function sendTravellerConfirmation(
     .join(" · ");
 
   const { data, error } = await resend.emails.send({
-    from: `Travel Asambe Africa <${fromEmail}>`,
+    from: `Tarisai Africa Travel <${fromEmail}>`,
     to: enquiry.email,
 
     subject: `We've received your enquiry — ${enquiry.reference}`,
@@ -228,7 +228,7 @@ export async function sendTravellerConfirmation(
           font-size: 12px;
           line-height: 1.6;
         ">
-            Travel Asambe Africa<br />
+            Tarisai Africa Travel<br />
           Thank you for choosing us for your travel experience.
         </div>
 

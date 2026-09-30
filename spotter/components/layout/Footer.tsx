@@ -153,7 +153,7 @@ export function Footer() {
         {/* Company Information */}
         <div className="mt-8 text-xs leading-6 text-earth">
           <p className="font-semibold text-earth">
-            Travel Asambe Africa
+            Tarisai Africa Travel
           </p>
 
           <p>Kazungula Street, Victoria Falls, Zimbabwe, 000263</p>
@@ -172,16 +172,16 @@ export function Footer() {
 
             Email -{" "}
             <ResearchContactLink
-              href="mailto:hello@travelasambe.co.za"
+              href="mailto:hello@tarisai.co.zw"
               eventName="email_clicked"
               className="transition-colors duration-200 hover:text-brand"
             >
-              hello@travelasambe.co.za
+              hello@tarisai.co.zw
             </ResearchContactLink>
           </p>
 
           <p className="mt-2 text-earth">
-            © Travel Asambe Africa {new Date().getFullYear()}
+            © Tarisai Africa Travel {new Date().getFullYear()}
           </p>
         </div>
       </div>

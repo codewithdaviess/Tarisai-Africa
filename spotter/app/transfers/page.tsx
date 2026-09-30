@@ -22,7 +22,7 @@ export default function TransfersPage() {
       <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <Container>
           <p className="max-w-3xl text-sm leading-7 text-neutral-600">
-            Transfers are arranged by enquiry and confirmed as part of your wider Travel Asambe Africa itinerary.
+            Transfers are arranged by enquiry and confirmed as part of your wider Tarisai Africa Travel itinerary.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {transfers.map((transfer) => (

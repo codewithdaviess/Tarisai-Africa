@@ -13,10 +13,10 @@ export default function LegalPage() {
   const [showOptionalCookies, setShowOptionalCookies] = useState(false);
 
   useEffect(() => {
-    document.title = "Legal | Travel Asambe Africa";
+    document.title = "Legal | Tarisai Africa Travel";
 
     const description =
-      "Travel Asambe Africa's privacy policy, cookie policy, photo credits, sitemap and cookie settings.";
+      "Tarisai Africa Travel's privacy policy, cookie policy, photo credits, sitemap and cookie settings.";
 
     let meta = document.querySelector(
       'meta[name="description"]',
@@ -51,7 +51,7 @@ export default function LegalPage() {
 
             <div className="mt-6 space-y-5 text-sm leading-7 text-black/65 sm:text-base">
               <p>
-                Travel Asambe Africa uses photographs and visual media to show
+                Tarisai Africa Travel uses photographs and visual media to show
                 destinations, activities, accommodation, transfers, specials and
                 other travel experiences available through this website.
               </p>
@@ -148,7 +148,7 @@ export default function LegalPage() {
 
               <LegalSubsection title="How we use cookies">
                 <p>
-                  Travel Asambe Africa uses necessary cookies or local storage
+                  Tarisai Africa Travel uses necessary cookies or local storage
                   for core website functionality, security, enquiry workflows and
                   remembering your cookie choices. Optional analytics, preference
                   and marketing categories are disabled unless you choose to

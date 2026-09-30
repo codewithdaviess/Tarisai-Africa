@@ -77,11 +77,11 @@ export async function sendTripEnquiryNotification(enquiry: TripEmailData) {
   }
 
   return resend.emails.send({
-    from: `Travel Asambe Africa <${fromEmail}>`,
+    from: `Tarisai Africa Travel <${fromEmail}>`,
     to: notificationEmail,
     subject: `New trip enquiry ${enquiry.reference}`,
     html: `<div style="font-family:Arial,sans-serif;max-width:620px;color:#171717">
-      <p style="color:#f08720;font-size:12px;font-weight:600;text-transform:uppercase">New Travel Asambe Africa enquiry</p>
+      <p style="color:#f08720;font-size:12px;font-weight:600;text-transform:uppercase">New Tarisai Africa Travel enquiry</p>
       <h1>${escapeHtml(enquiry.reference)}</h1>
       <h2>Requested trip</h2>
       <ul>${itemList(enquiry.items)}</ul>
@@ -99,13 +99,13 @@ export async function sendTripEnquiryConfirmation(enquiry: TripEmailData) {
     process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
 
   return resend.emails.send({
-    from: `Travel Asambe Africa <${fromEmail}>`,
+    from: `Tarisai Africa Travel <${fromEmail}>`,
     to: enquiry.email,
-    subject: `We've received your Travel Asambe Africa enquiry — ${enquiry.reference}`,
+    subject: `We've received your Tarisai Africa Travel enquiry — ${enquiry.reference}`,
     html: `<div style="font-family:Arial,sans-serif;max-width:620px;color:#171717">
       <p style="color:#f08720;font-size:12px;font-weight:600;text-transform:uppercase">Enquiry received</p>
       <h1>Thanks, ${escapeHtml(enquiry.firstName)}.</h1>
-      <p>We've received your Travel Asambe Africa enquiry.</p>
+      <p>We've received your Tarisai Africa Travel enquiry.</p>
       <p><strong>Reference:</strong> ${escapeHtml(enquiry.reference)}</p>
       <h2>Your requested trip</h2>
       <ul>${itemList(enquiry.items)}</ul>

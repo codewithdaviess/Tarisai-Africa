@@ -7,7 +7,7 @@ import { galleryCategories } from "@/data/gallery";
 export const metadata: Metadata = {
   title: "Victoria Falls Travel Gallery",
   description:
-    "See the destinations, activities, wildlife and dining experiences behind Travel Asambe Africa journeys.",
+    "See the destinations, activities, wildlife and dining experiences behind Tarisai Africa Travel journeys.",
   alternates: { canonical: "/gallery" },
 };
 

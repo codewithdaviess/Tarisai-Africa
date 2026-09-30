@@ -6,7 +6,7 @@ import { PageHero } from "@/components/ui/PageHero";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Learn how Travel Asambe Africa collects, uses and protects your personal information.",
+    "Learn how Tarisai Africa Travel collects, uses and protects your personal information.",
 };
 
 export default function PrivacyPage() {
@@ -15,7 +15,7 @@ export default function PrivacyPage() {
       <PageHero
         image="/images/activities/activities-hero.jpg"
         title="Privacy Policy"
-        description="How Travel Asambe Africa collects, uses and protects your information."
+        description="How Tarisai Africa Travel collects, uses and protects your information."
       />
 
       <section className="py-16">
@@ -70,7 +70,7 @@ export default function PrivacyPage() {
             <PolicySection title="Contact us">
               <p>
                 If you have a question about this policy or how your information
-                is handled, please contact Travel Asambe Africa through our
+                is handled, please contact Tarisai Africa Travel through our
                 <a
                   href="/contact"
                   className="ml-1 font-medium text-black underline underline-offset-4"

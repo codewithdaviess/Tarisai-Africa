@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Cormorant_Garamond, Quicksand } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { TripProvider } from "@/components/trip/TripProvider";
 import TripFloatingButton from "@/components/trip/TripFloatingButton";
-import CookieConsentPopup from "@/components/ui/CookieConsentPopup";
 
 const quicksand = Quicksand({
   variable: "--font-quicksand",
@@ -22,18 +19,18 @@ const cormorantGaramond = Cormorant_Garamond({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://travelasambe.co.za";
-const siteTitle = "Travel Asambe Africa | Victoria Falls Tours & Experiences";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tarisai.co.zw";
+const siteTitle = "Tarisai Africa Travel | Victoria Falls Tours & Experiences";
 const siteDescription =
-  "Discover unforgettable tours, activities and experiences in Victoria Falls with Travel Asambe Africa.";
+  "Book unforgettable Victoria Falls tours, Zimbabwe adventures, accommodation and tailored travel experiences with Tarisai Africa Travel.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  applicationName: "Travel Asambe Africa",
+  applicationName: "Tarisai Africa Travel",
 
   title: {
     default: siteTitle,
-    template: "%s | Travel Asambe Africa",
+    template: "%s | Tarisai Africa Travel",
   },
 
   description: siteDescription,
@@ -43,17 +40,18 @@ export const metadata: Metadata = {
   },
 
   keywords: [
-    "Travel Asambe Africa",
+    "Tarisai Africa Travel",
     "Victoria Falls tours",
     "Victoria Falls activities",
-    "Victoria Falls experiences",
-    "things to do in Victoria Falls",
+    "Victoria Falls travel agency",
     "Zimbabwe tours",
-    "Victoria Falls travel",
+    "Zimbabwe travel experiences",
+    "Victoria Falls accommodation",
+    "Tailor-made Africa travel",
   ],
 
-  authors: [{ name: "Travel Asambe Africa" }],
-  creator: "Travel Asambe Africa",
+  authors: [{ name: "Tarisai Africa Travel" }],
+  creator: "Tarisai Africa Travel",
 
   formatDetection: {
     email: false,
@@ -63,7 +61,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    siteName: "Travel Asambe Africa",
+    siteName: "Tarisai Africa Travel",
     url: siteUrl,
     title: siteTitle,
     description: siteDescription,
@@ -72,7 +70,7 @@ export const metadata: Metadata = {
         url: "/images/destinations/victoria-falls-1.webp",
         width: 1200,
         height: 630,
-        alt: "Victoria Falls in Zimbabwe",
+        alt: "Victoria Falls and travel experiences in Zimbabwe",
       },
     ],
   },
@@ -115,13 +113,8 @@ export default function RootLayout({
 
           <TripFloatingButton />
 
-          <CookieConsentPopup />
-
           <Footer />
         </TripProvider>
-
-        <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );

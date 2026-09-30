@@ -8,7 +8,7 @@ import { galleryCategories } from "@/data/gallery";
 import { specials } from "@/data/specials";
 import { transfers } from "@/data/transfers";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://travelasambe.co.za";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tarisai.co.zw";
 
 const staticRoutes = [
   ["/", 1, "weekly"],

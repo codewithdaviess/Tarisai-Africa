@@ -84,7 +84,7 @@ export async function sendEnquiryNotification(
     .join(" · ");
 
   const { data, error } = await resend.emails.send({
-    from: `Travel Asambe Africa <${fromEmail}>`,
+    from: `Tarisai Africa Travel <${fromEmail}>`,
     to: notificationEmail,
 
     subject: `New enquiry ${enquiry.reference} — ${enquiry.activityName}`,
@@ -182,7 +182,7 @@ export async function sendEnquiryNotification(
           font-size: 12px;
           line-height: 1.6;
         ">
-          This enquiry was submitted through the Travel Asambe Africa website.
+          This enquiry was submitted through the Tarisai Africa Travel website.
         </div>
 
       </div>

@@ -50,12 +50,12 @@ export function Header() {
         {/* Logo */}
         <Link
           href="/"
-          aria-label="Travel Asambe Africa home"
+          aria-label="Tarisai Africa Travel home"
           className="flex shrink-0 items-center"
         >
           <Image
             src={logo}
-            alt="Travel Asambe Africa"
+            alt="Tarisai Africa Travel"
             width={2080}
             height={1050}
             className="h-auto w-37.5 object-contain sm:w-32.5 lg:w-35"

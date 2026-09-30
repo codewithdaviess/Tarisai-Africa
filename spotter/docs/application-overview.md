@@ -1,6 +1,6 @@
-# Travel Asambe Africa Application
+# Tarisai Africa Travel Application
 
-Travel Asambe Africa is an African travel planning application focused on Victoria Falls experiences and trip enquiries.
+Tarisai Africa Travel is a travel planning application focused on Victoria Falls experiences, tours, and trip enquiries.
 
 ## Main Product Types
 
